@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chin Carine Wirdzeyii - Executive Administrator & Project Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #dbeafe;
+            --accent: #0ea5e9;
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-400: #94a3b8;
+            --slate-500: #64748b;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            --white: #ffffff;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, var(--slate-50) 0%, #f0f4f8 100%);
+            color: var(--slate-800);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ::selection {
+            background: var(--primary-light);
+            color: #1e40af;
+        }
+
+        /* ─────────────────────── NAVIGATION ─────────────────────── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            z-index: 50;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-inner {
+            max-width: 85rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--slate-600);
+            text-decoration: none;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+        }
+
+        /* ─────────────────────── HERO ─────────────────────── */
+        #home {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            max-width: 85rem;
+            margin: 0 auto;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-wrapper {
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--slate-900), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
+
+        .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.35rem;
+            color: var(--slate-700);
+            max-width: 50rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--white);
+            border: 1px solid var(--slate-200);
+            padding: 0.65rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--slate-600);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .badge svg {
+            width: 1rem;
+            height: 1rem;
+            color: var(--primary);
+        }
+
+        /* ─────────────────────── SECTIONS ─────────────────────── */
+        section {
+            padding: 6rem 1.5rem;
+            max-width: 85rem;
+            margin: 0 auto;
+        }
+
+        section.light {
+            background: var(--white);
+            margin: 2rem auto;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        section.dark {
+            background: linear-gradient(135deg, var(--slate-900) 0%, #0f1a2a 100%);
+            color: var(--white);
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+
+        .section-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--slate-900);
+        }
+
+        section.dark .section-heading {
+            color: var(--white);
+        }
+
+        .accent-bar {
+            width: 4px;
+            height: 2.5rem;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        /* ─────────────────────── SUMMARY ─────────────────────── */
+        .summary-grid {
+            display: grid;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            .summary-grid {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+
+        .summary-text {
+            display: grid;
+            gap: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--slate-700);
+            line-height: 1.8;
+        }
+
+        .strengths-box {
+            background: linear-gradient(135deg, var(--slate-50) 0%, #f9fafb 100%);
+            padding: 2.5rem;
+            border-radius: 1.2rem;
+            border: 1px solid var(--slate-200);
+        }
+
+        .strengths-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--slate-900);
+        }
+
+        .strengths-list {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .strength-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--slate-700);
+            transition: var(--transition);
+        }
+
+        .strength-item:hover {
+            transform: translateX(4px);
+        }
+
+        .strength-item svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .strength-item span {
+            font-weight: 600;
+        }
+
+        /* ─────────────────────── COMPETENCIES ─────────────────────── */
+        .competencies-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        @media (min-width: 768px) {
+            .competencies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .comp-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1.2rem;
+            border: 1px solid var(--slate-200);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .comp-card:nth-child(1) { animation-delay: 0.1s; }
+        .comp-card:nth-child(2) { animation-delay: 0.2s; }
+        .comp-card:nth-child(3) { animation-delay: 0.3s; }
+        .comp-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .comp-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+            border-color: var(--primary);
+        }
+
+        .icon-badge {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-radius: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-badge svg {
+            width: 1.75rem;
+            height: 1.75rem;
+            color: var(--primary);
+        }
+
+        .comp-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--slate-900);
+        }
+
+        .comp-card p {
+            color: var(--slate-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+            font-size: 0.95rem;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .skill-tag {
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--slate-100), var(--slate-50));
+            color: var(--slate-700);
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            border: 1px solid var(--slate-200);
+            transition: var(--transition);
+        }
+
+        .comp-card:hover .skill-tag {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ─────────────────────── EXPERIENCE ─────────────────────── */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent), transparent);
+        }
+
+        .timeline-item {
+            margin-left: 2.5rem;
+            margin-bottom: 3rem;
+            animation: slideIn 0.6s ease-out forwards;
+            opacity: 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.75rem;
+            top: 0.3rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            background: var(--white);
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px var(--slate-50), 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .period-tag {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-item p {
+            color: var(--slate-600);
+            line-height: 1.75;
+            font-size: 0.98rem;
+        }
+
+        /* ─────────────────────── EDUCATION & CERTS ─────────────────────── */
+        .edu-cert-wrapper {
+            padding: 6rem 1.5rem;
+            max-width: 85rem;
+            margin: 0 auto;
+        }
+
+        .edu-cert-grid {
+            display: grid;
+            gap: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .edu-cert-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+        }
+
+        .edu-col h2,
+        .cert-col h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--slate-900);
+        }
+
+        .edu-col h2 svg,
+        .cert-col h2 svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            color: var(--primary);
+        }
+
+        .edu-items {
+            display: grid;
+            gap: 2.2rem;
+        }
+
+        .edu-item {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--slate-200);
+            transition: var(--transition);
+        }
+
+        .edu-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .edu-item:hover h4 {
+            color: var(--primary);
+        }
+
+        .edu-item h4 {
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 0.4rem;
+            font-size: 1rem;
+        }
+
+        .edu-item p {
+            font-size: 0.9rem;
+            color: var(--slate-500);
+        }
+
+        .cert-awards-grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .cert-list,
+        .awards-list {
+            display: grid;
+            gap: 1.3rem;
+        }
+
+        .cert-item,
+        .award-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .cert-item svg,
+        .award-item svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 0.3rem;
+        }
+
+        .cert-item p,
+        .award-item p {
+            color: var(--slate-700);
+            font-weight: 500;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* ─────────────────────── CONTACT ─────────────────────── */
+        .contact-grid {
+            display: grid;
+            gap: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+
+        .contact-intro {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-items {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            position: relative;
+        }
+
+        .contact-item:nth-child(1) { animation-delay: 0.1s; }
+        .contact-item:nth-child(2) { animation-delay: 0.2s; }
+        .contact-item:nth-child(3) { animation-delay: 0.3s; }
+        .contact-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover .contact-icon {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-color: transparent;
+            transform: scale(1.1);
+        }
+
+        .contact-icon svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            color: var(--white);
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.5;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .profile-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2.5rem;
+            border-radius: 1.2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        .profile-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .profile-box p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cv-button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .cv-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .cv-button svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* ─────────────────────── FOOTER ─────────────────────── */
+        footer {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--slate-600);
+            font-size: 0.9rem;
+            background: var(--white);
+            border-top: 1px solid var(--slate-200);
+            margin-top: 3rem;
+        }
+
+        /* ─────────────────────── ANIMATIONS ─────────────────────── */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(2rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-1rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ─────────────────────── RESPONSIVE ─────────────────────── */
+        @media (max-width: 640px) {
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .section-heading {
+                font-size: 1.75rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                margin-left: 2.5rem;
+            }
+
+            .timeline-item::before {
+                left: -2.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="logo">CCW.</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#summary">Summary</a>
+                <a href="#competencies">Competencies</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get in Touch</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-wrapper">
+            <h1>Chin Carine Wirdzeyii</h1>
+            <p class="subtitle">Executive Administrator & Project Professional</p>
+            <p class="tagline">Results-driven professional with over 15 years of experience supporting operational excellence within international development organizations.</p>
+            <div class="badges-container">
+                <div class="badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    English & French Fluent
+                </div>
+                <div class="badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Cameroon
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section id="summary" class="light">
+        <h2 class="section-heading">
+            <div class="accent-bar"></div>
+            Professional Summary
+        </h2>
+        <div class="summary-grid">
+            <div class="summary-text">
+                <p>I am a Business Administrator and PMD Pro1–certified project management practitioner with over 15 years of experience driving operational excellence and program effectiveness within international NGOs and global health initiatives. Recognized for strengthening organizational performance through high-level support to senior leadership, integrated operations management, and data-informed decision-making.</p>
+                
+                <p>Brings deep expertise in administrative leadership, project oversight, and cross-functional coordination across procurement, logistics and human resources systems. Proven ability to support full project lifecycles—planning, budgeting, implementation, and donor reporting—while ensuring alignment with international standards and donor requirements.</p>
+                
+                <p>Extensive experience contributing to large-scale, donor-funded programs in HIV/AIDS, tuberculosis, and public health, including UNITAID, PEPFAR, and ViiV Healthcare fundings. Adept at optimizing systems and workflows through digital tools and AI-enabled solutions to enhance efficiency, accountability, and reporting accuracy.</p>
+            </div>
+            <div class="strengths-box">
+                <h3>Key Strengths</h3>
+                <ul class="strengths-list">
+                    <li class="strength-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Strategic Leadership Support</span>
+                    </li>
+                    <li class="strength-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Operational Efficiency</span>
+                    </li>
+                    <li class="strength-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Complex Logistics Management</span>
+                    </li>
+                    <li class="strength-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Compliance & Ethics Governance</span>
+                    </li>
+                    <li class="strength-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Digital Transformation & AI</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section id="competencies">
+        <h2 class="section-heading">
+            <div class="accent-bar"></div>
+            Core Competencies
+        </h2>
+        <div class="competencies-grid">
+            <div class="comp-card">
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Executive & Operations</h3>
+                <p>Expertise in providing high-level strategic support to senior leadership teams. Managing complex calendars, coordinating high-stakes stakeholder meetings, and overseeing comprehensive office operations with focus on operational excellence.</p>
+                <div class="skills-tags">
+                    <span class="skill-tag">Executive support</span>
+                    <span class="skill-tag">Stakeholder coordination</span>
+                    <span class="skill-tag">Facility management</span>
+                    <span class="skill-tag">Fleet & logistics</span>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <h3>Project & Program Management</h3>
+                <p>Certified PMD Pro1 professional with proven track record in full lifecycle of donor-funded initiatives. Specializing in activity planning, budget monitoring, and ensuring 100% compliance with international standards.</p>
+                <div class="skills-tags">
+                    <span class="skill-tag">Project planning</span>
+                    <span class="skill-tag">Budget monitoring</span>
+                    <span class="skill-tag">Compliance</span>
+                    <span class="skill-tag">Donor reporting</span>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Personnel & Team Leadership</h3>
+                <p>Skilled in managing large-scale teams (400+ staff) and overseeing entire employee lifecycle. Extensive experience in staff recruitment, orientation programs, and performance management with precision.</p>
+                <div class="skills-tags">
+                    <span class="skill-tag">Staff recruitment</span>
+                    <span class="skill-tag">Onboarding</span>
+                    <span class="skill-tag">Performance mgmt</span>
+                    <span class="skill-tag">Team coordination</span>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M2 17h20"></path>
+                        <path d="M6 21h12"></path>
+                    </svg>
+                </div>
+                <h3>Technical & Digital Skills</h3>
+                <p>Forward-thinking professional leveraging cutting-edge technology to improve organizational performance. Proficient in AI prompt engineering, advanced Excel data management, and Gantt chart project tracking.</p>
+                <div class="skills-tags">
+                    <span class="skill-tag">AI tools</span>
+                    <span class="skill-tag">Excel & data</span>
+                    <span class="skill-tag">Gantt charts</span>
+                    <span class="skill-tag">App development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="light">
+        <h2 class="section-heading">
+            <div class="accent-bar"></div>
+            Professional Experience
+        </h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="period-tag">January 2020 – Present</div>
+                <h3>Executive & Administrative Officer to Country Director</h3>
+                <p>Providing strategic support to senior leadership, managing 50+ monthly stakeholder meetings, and leading concurrent donor-funded initiatives. Orchestrating orientation for 400+ staff, managing international conferences for 200+ participants, and overseeing facility operations and ethics compliance tracking.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="period-tag">January 2018 – January 2020</div>
+                <h3>Executive Assistant to Country Director</h3>
+                <p>Managed full executive diary and daily appointments using advanced tracking systems. Coordinated national and regional events, trainings, and project launches. Developed travel tracking databases with calendar mapping and logistics coordination. Assisted with IRB protocol reviews, MOU development, and partner contracts.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="period-tag">2017 – 2018</div>
+                <h3>Project Assistant, UNITAID POC EID Project</h3>
+                <p>Coordinated national and regional project meetings and workshops. Managed program advances and purchase requests through procurement systems. Developed monthly work plans and maintained activity calendars for multiple program sites. Tracked project implementation progress and expenditure against budget projections.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="period-tag">2008 – 2017</div>
+                <h3>Administrative Assistant, Bonassama Health District</h3>
+                <p>Oversaw office operations and stakeholder communications for the health district. Managed health information systems (DHIS), collecting and analyzing data for 12+ health programs. Coordinated health campaigns and epidemic response initiatives. Developed budgets and Terms of Reference for district programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <div class="edu-cert-wrapper">
+        <div class="edu-cert-grid">
+            <div class="edu-col">
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    Education
+                </h2>
+                <div class="edu-items">
+                    <div class="edu-item">
+                        <h4>Masters in Business Administration</h4>
+                        <p>Texila American University • 2022</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Professional Bachelors in Business Administration</h4>
+                        <p>University of Dschang • 2016</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Higher National Diploma in Business Finance & Management</h4>
+                        <p>MINSUP - ISEM/IBCG • 2015</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>BTS Comptabilité</h4>
+                        <p>Institut Supérieur Professeurs Réunis • 2012</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>DEUG en Economie et Gestion</h4>
+                        <p>Université de Yaoundé II SOA • 2002</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-col">
+                <div class="cert-awards-grid">
+                    <div>
+                        <h2>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <path d="M12 15v6"></path>
+                                <path d="M8 19h8"></path>
+                            </svg>
+                            Certifications
+                        </h2>
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <p>PMD Pro1 - APMG International</p>
+                            </div>
+                            <div class="cert-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <p>AI Training Graduate - May 2026</p>
+                            </div>
+                            <div class="cert-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <p>Executive Leadership Training</p>
+                            </div>
+                            <div class="cert-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <p>Ethics Training with RETC Certificate</p>
+                            </div>
+                            <div class="cert-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <p>Fraud Awareness Training</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h2>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <path d="M12 15v6"></path>
+                                <path d="M8 19h8"></path>
+                            </svg>
+                            Recognitions & Awards
+                        </h2>
+                        <div class="awards-list">
+                            <div class="award-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <path d="M12 15v6"></path>
+                                    <path d="M8 19h8"></path>
+                                </svg>
+                                <p>Certificate of Most Passionate Worker (2018)</p>
+                            </div>
+                            <div class="award-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <path d="M12 15v6"></path>
+                                    <path d="M8 19h8"></path>
+                                </svg>
+                                <p>Service Awards for Dedicated & Passionate Work</p>
+                            </div>
+                            <div class="award-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <path d="M12 15v6"></path>
+                                    <path d="M8 19h8"></path>
+                                </svg>
+                                <p>District Best Worker of the Year (2011 & 2012)</p>
+                            </div>
+                            <div class="award-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <path d="M12 15v6"></path>
+                                    <path d="M8 19h8"></path>
+                                </svg>
+                                <p>Letter of Congratulation for MAPE Data Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="dark">
+        <h2 class="section-heading">
+            <div class="accent-bar"></div>
+            Contact Information
+        </h2>
+        <div class="contact-grid">
+            <div>
+                <p class="contact-intro">I am always open to discussing new opportunities, strategic partnerships, or operational challenges. Feel free to reach out through any of the channels below.</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">chin.carine@yahoo.com</div>
+                            <div class="contact-value" style="font-size: 0.9rem; opacity: 0.9;">chincarinewirdzeyii@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">(237) 675909305</div>
+                            <div class="contact-value" style="font-size: 0.9rem; opacity: 0.9;">694827236</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">Skype</div>
+                            <div class="contact-value">chin.carine</div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.linkedin.com/in/chin-carine-wirdzeyii-39a757135?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="contact-item contact-link">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">View Profile →</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-box">
+                <h3>Professional Profile</h3>
+                <p>Based in Cameroon, available for travel and international assignments as required by project needs.</p>
+                <button class="cv-button" onclick="downloadCV()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download CV
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Chin Carine Wirdzeyii. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`a[href="#${sectionId}"]`);
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.style.color = 'var(--slate-600)';
+                    });
+                    if (navLink) {
+                        navLink.style.color = 'var(--primary)';
+                    }
+                }
+            });
+        });
+
+        // CV Download functionality
+        function downloadCV() {
+            alert('CV download feature would be implemented by connecting to a file server or PDF generator. For now, you can export this page as PDF using your browser print function (Ctrl+P or Cmd+P).');
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.comp-card, .timeline-item, .contact-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
